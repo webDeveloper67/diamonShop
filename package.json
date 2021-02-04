@@ -1,0 +1,14 @@
+{
+  "name": "diamondshop",
+  "version": "1.0.0",
+  "description": "an app that you can use to shop ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "author": "mDee",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
