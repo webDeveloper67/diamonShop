@@ -7,6 +7,9 @@ router.get(
   '/',
   asyncHandler(async (req, res) => {
     const products = await Product.find({});
+    // Purposely throw an error
+    // res.status(401);
+    // throw new Error('Not auth user');
     res.json(products);
   })
 );
