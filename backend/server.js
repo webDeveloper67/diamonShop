@@ -6,10 +6,14 @@ import connectDB from './config/db.js';
 
 // Routes
 import productRoutes from './routes/products.js';
+import userRoutes from './routes/users.js';
 
 dotenv.config();
 connectDB();
 const app = express();
+
+// allow us to accept json data in body
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('API is running....');
@@ -17,6 +21,7 @@ app.get('/', (req, res) => {
 
 // mounting routes
 app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes);
 
 // 404 Error Handler
 app.use(notFound);
