@@ -10,7 +10,7 @@ import {
   Card,
 } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../actions/cartsAct';
+import { addToCart, removeFromCart } from '../actions/cartsAct';
 import Message from '../components/Message';
 
 const CartScreen = ({ match, location, history }) => {
@@ -34,7 +34,7 @@ const CartScreen = ({ match, location, history }) => {
   );
 
   const removeFromCartHandler = id => {
-    console.log('remove from cart handler');
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
