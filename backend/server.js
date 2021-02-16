@@ -7,6 +7,7 @@ import connectDB from './config/db.js';
 // Routes
 import productRoutes from './routes/products.js';
 import userRoutes from './routes/users.js';
+import orderRoutes from './routes/orders.js';
 
 dotenv.config();
 connectDB();
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 // mounting routes
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/orders', orderRoutes);
 
 // 404 Error Handler
 app.use(notFound);
